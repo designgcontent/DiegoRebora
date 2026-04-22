@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diego Rébora - Art Director / Stylist & Fashion PR</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Syne:wght@700&display=swap" rel="stylesheet">
+</head>
+<body class="lang-en page-home">
+
+  <header class="header">
+    <div class="logo-container" onclick="navigateTo('home')">
+      <svg viewBox="0 0 100 100" class="logo">
+        <circle cx="50" cy="50" r="46" fill="white" stroke="black" stroke-width="6" />
+        <ellipse cx="32" cy="35" rx="4.5" ry="12" fill="black" />
+        <ellipse cx="50" cy="35" rx="4.5" ry="12" fill="black" />
+        <ellipse cx="68" cy="35" rx="4.5" ry="12" fill="black" />
+        <path d="M 18 56 Q 21 51 24 56 C 33 78, 67 78, 76 56 Q 79 51 82 56" fill="none" stroke="black" stroke-width="5" stroke-linecap="round" />
+      </svg>
+    </div>
+
+    <div class="desktop-nav">
+      <nav>
+        <button onclick="navigateTo('home')" class="nav-link active" data-target="home">
+          <span class="en-text">Home</span><span class="es-text">Inicio</span>
+        </button>
+        <button onclick="navigateTo('about')" class="nav-link" data-target="about">
+          <span class="en-text">About</span><span class="es-text">Sobre mí</span>
+        </button>
+        <button onclick="navigateTo('contact')" class="nav-link" data-target="contact">
+          <span class="en-text">Contact</span><span class="es-text">Contacto</span>
+        </button>
+      </nav>
+      
+      <div class="divider"></div>
+      
+      <button class="lang-toggle" onclick="toggleLanguage()">
+        <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+        <span class="en-text">EN / ES</span><span class="es-text">ES / EN</span>
+      </button>
+    </div>
+
+    <div class="mobile-controls">
+      <button class="lang-toggle-mobile" onclick="toggleLanguage()">
+        <span class="en-text">EN</span><span class="es-text">ES</span>
+      </button>
+      <button class="menu-toggle" onclick="toggleMenu()">
+        <svg id="icon-menu" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+        <svg id="icon-close" style="display:none;" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div id="mobile-menu" class="mobile-menu">
+    <nav>
+      <button onclick="navigateTo('home')"><span class="en-text">Home</span><span class="es-text">Inicio</span></button>
+      <button onclick="navigateTo('about')"><span class="en-text">About</span><span class="es-text">Sobre mí</span></button>
+      <button onclick="navigateTo('contact')"><span class="en-text">Contact</span><span class="es-text">Contacto</span></button>
+    </nav>
+  </div>
+
+  <main class="main-content">
+    
+    <div id="view-home" class="view">
+      <div class="marquee-wrapper">
+        <div class="marquee-content font-title">
+          DIEGO RÉBORA • DIEGO RÉBORA • DIEGO RÉBORA • DIEGO RÉBORA • 
+        </div>
+      </div>
+      <div class="home-about">
+        <div class="max-w-3xl">
+          <h2 class="title font-title">
+            <span class="en-text">ABOUT ME</span><span class="es-text">SOBRE MÍ</span>
+          </h2>
+          <div class="text-content">
+            <p><span class="en-text">I am Diego Rébora, an Art Director, Stylist, and Fashion PR with several years of experience, dedicated to crafting unique digital and physical experiences.</span><span class="es-text">Soy Diego Rébora, Director de Arte, Estilista y PR de Moda con varios años de experiencia, dedicado a crear experiencias digitales y físicas únicas.</span></p>
+            <p><span class="en-text">My work focuses on translating complex ideas into compelling visual narratives, helping brands and individuals stand out in a crowded market.</span><span class="es-text">Mi trabajo se centra en traducir ideas complejas en narrativas visuales atractivas, ayudando a marcas e individuos a destacar en un mercado saturado.</span></p>
+            <p><span class="en-text">From brand identity and innovative creative direction to comprehensive visual strategies, I approach every project with a blend of artistic vision and strategic thinking.</span><span class="es-text">Desde la identidad de marca y dirección creativa innovadora hasta estrategias visuales integrales, abordo cada proyecto con una combinación de visión artística y pensamiento estratégico.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="view-about" class="view">
+      <div class="grid-2 px-container py-large">
+        <div class="text-center-mobile">
+          <h2 class="title-large font-title mb-10">
+            <span class="en-text">ABOUT ME</span><span class="es-text">SOBRE MÍ</span>
+          </h2>
+          <div class="text-content-black">
+            <p><span class="en-text">I am Diego Rébora, an Art Director, Stylist, and Fashion PR with several years of experience, dedicated to crafting unique digital and physical experiences.</span><span class="es-text">Soy Diego Rébora, Director de Arte, Estilista y PR de Moda con varios años de experiencia, dedicado a crear experiencias digitales y físicas únicas.</span></p>
+            <p><span class="en-text">My work focuses on translating complex ideas into compelling visual narratives, helping brands and individuals stand out in a crowded market.</span><span class="es-text">Mi trabajo se centra en traducir ideas complejas en narrativas visuales atractivas, ayudando a marcas e individuos a destacar en un mercado saturado.</span></p>
+            <p><span class="en-text">From brand identity and innovative creative direction to comprehensive visual strategies, I approach every project with a blend of artistic vision and strategic thinking.</span><span class="es-text">Desde la identidad de marca y dirección creativa innovadora hasta estrategias visuales integrales, abordo cada proyecto con una combinación de visión artística y pensamiento estratégico.</span></p>
+          </div>
+        </div>
+        <div class="flex-center order-mobile-first">
+          <svg viewBox="0 0 100 100" class="logo-large">
+            <circle cx="50" cy="50" r="46" fill="white" stroke="black" stroke-width="6" />
+            <ellipse cx="32" cy="35" rx="4.5" ry="12" fill="black" />
+            <ellipse cx="50" cy="35" rx="4.5" ry="12" fill="black" />
+            <ellipse cx="68" cy="35" rx="4.5" ry="12" fill="black" />
+            <path d="M 18 56 Q 21 51 24 56 C 33 78, 67 78, 76 56 Q 79 51 82 56" fill="none" stroke="black" stroke-width="5" stroke-linecap="round" />
+          </svg>
+        </div>
+      </div>
+
+      <div class="grid-2 px-container py-large">
+        <div class="flex-center-mobile flex-start-desktop">
+          <img src="https://i.imgur.com/s2ebjlS.jpg" alt="Diego Rébora" class="founder-img" />
+        </div>
+        <div class="text-center-mobile text-right-desktop max-w-xl mx-auto">
+          <h2 class="title-medium font-title mb-8">
+            <span class="en-text">MY BACKGROUND</span><span class="es-text">MI TRAYECTORIA</span>
+          </h2>
+          <div class="text-content-black">
+            <p><span class="en-text">With several years of experience as an Art Director and Stylist in the creative industry, I have developed a deep understanding of visual communication and brand development.</span><span class="es-text">Con varios años de experiencia como Director de Arte y Estilista en la industria creativa, he desarrollado un profundo conocimiento de la comunicación visual y el desarrollo de marcas.</span></p>
+            <p><span class="en-text">I specialize in creating cohesive identities that resonate with target audiences, combining aesthetic appeal with highly functional design.</span><span class="es-text">Me especializo en crear identidades cohesivas que conecten con las audiencias, combinando atractivo estético con un diseño altamente funcional.</span></p>
+            <p><span class="en-text">My goal is to continuously push creative boundaries, delivering work that not only looks exceptional but also drives meaningful results for my clients.</span><span class="es-text">Mi objetivo es empujar continuamente los límites creativos, entregando un trabajo que no solo se vea excepcional, sino que también genere resultados significativos para mis clientes.</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="view-contact" class="view">
+      <div class="grid-2 px-container py-large flex-grow">
+        <div class="text-center-mobile text-left-desktop">
+          <h2 class="title-medium font-title">
+            <span class="en-text">CONTACT ME</span><span class="es-text">CONTÁCTAME</span>
+          </h2>
+        </div>
+        
+        <div>
+          <form id="contact-form" class="form-container" action="https://formsubmit.co/correodediegorebora@gmail.com" method="POST">
+            <input type="hidden" name="_next" value="https://tudominio.com/"> 
+            <input type="hidden" name="_captcha" value="false">
+
+            <div class="form-group">
+              <span class="label"><span class="en-text">Name</span><span class="es-text">Nombre</span></span>
+              <div class="grid-2-gap">
+                <div>
+                  <label class="sub-label">
+                    <span class="en-text">First Name</span><span class="es-text">Nombre</span> <span class="required">(<span class="en-text">required</span><span class="es-text">obligatorio</span>)</span>
+                  </label>
+                  <input name="Nombre" required type="text" class="input-field" />
+                </div>
+                <div>
+                  <label class="sub-label">
+                    <span class="en-text">Last Name</span><span class="es-text">Apellido</span> <span class="required">(<span class="en-text">required</span><span class="es-text">obligatorio</span>)</span>
+                  </label>
+                  <input name="Apellido" required type="text" class="input-field" />
+                </div>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label class="label">
+                <span class="en-text">Email</span><span class="es-text">Email</span> <span class="required normal">(<span class="en-text">required</span><span class="es-text">obligatorio</span>)</span>
+              </label>
+              <input name="Email" required type="email" class="input-field" />
+            </div>
+
+            <div class="form-group">
+              <label class="label">
+                <span class="en-text">Subject</span><span class="es-text">Asunto</span> <span class="required normal">(<span class="en-text">required</span><span class="es-text">obligatorio</span>)</span>
+              </label>
+              <input name="Asunto" required type="text" class="input-field" />
+            </div>
+
+            <div class="form-group">
+              <label class="label">
+                <span class="en-text">Message</span><span class="es-text">Mensaje</span> <span class="required normal">(<span class="en-text">required</span><span class="es-text">obligatorio</span>)</span>
+              </label>
+              <textarea name="Mensaje" required rows="5" class="input-field resize-y"></textarea>
+            </div>
+
+            <button type="submit" class="submit-btn font-title">
+              <span class="en-text">SUBMIT</span><span class="es-text">ENVIAR</span>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+  </main>
+
+  <footer class="footer">
+    <div class="footer-title font-title">Diego Rébora</div>
+    <div class="social-links">
+      <a href="https://www.instagram.com/reboradiego/" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+      </a>
+      <a href="https://www.facebook.com/diego.rebora" target="_blank" rel="noopener noreferrer">
+        <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+      </a>
+    </div>
+    <div class="footer-contact">
+      <a href="mailto:correodediegorebora@gmail.com" class="footer-link">correodediegorebora@gmail.com</a>
+      <span class="footer-separator hidden-mobile">|</span>
+      <a href="tel:+511921767392" class="footer-link">+511 921767392</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,275 @@
+/* =========================================
+   VARIABLES Y RESET
+   ========================================= */
+:root {
+  --color-black: #000000;
+  --color-white: #ffffff;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-800: #1f2937;
+  --font-sans: 'Space Grotesk', sans-serif;
+  --font-title: 'Syne', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-white);
+  color: var(--color-black);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.font-title { 
+  font-family: var(--font-title) !important; 
+}
+
+/* =========================================
+   GESTIÓN DE IDIOMAS Y VISTAS SPA
+   ========================================= */
+body.lang-en .es-text { display: none; }
+body.lang-es .en-text { display: none; }
+
+.view { display: none; }
+body.page-home #view-home { display: block; }
+body.page-about #view-about { display: block; }
+body.page-contact #view-contact { display: block; }
+
+.main-content {
+  flex: 1;
+  padding-top: 80px; /* Compensa el header fijo */
+}
+
+/* =========================================
+   HEADER Y NAVEGACIÓN
+   ========================================= */
+.header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: var(--color-white);
+  z-index: 50;
+  padding: 1rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  border-bottom: 1px solid var(--color-gray-100);
+}
+
+.logo-container { cursor: pointer; display: flex; align-items: center; gap: 1rem; }
+.logo {
+  width: 2.5rem; height: 2.5rem;
+  transition: transform 0.3s;
+}
+.logo:hover { transform: scale(1.05); }
+
+.desktop-nav { display: none; align-items: center; gap: 2rem; }
+.desktop-nav nav { display: flex; gap: 2rem; align-items: center; }
+.nav-link {
+  background: none; border: none; border-bottom: 2px solid transparent;
+  font-size: 0.875rem; letter-spacing: 0.05em;
+  text-transform: uppercase; cursor: pointer;
+  padding-bottom: 0.25rem; transition: all 0.2s;
+  font-family: var(--font-sans);
+}
+.nav-link:hover { color: var(--color-gray-600); }
+.nav-link.active { border-color: var(--color-black); font-weight: bold; }
+
+.divider { height: 1.5rem; width: 1px; background-color: var(--color-gray-300); }
+
+.lang-toggle {
+  background: none; border: none; display: flex; align-items: center; gap: 0.5rem;
+  font-size: 0.875rem; font-weight: bold; letter-spacing: 0.1em;
+  cursor: pointer; transition: color 0.2s; font-family: var(--font-sans);
+}
+.lang-toggle:hover { color: var(--color-gray-600); }
+
+.mobile-controls { display: flex; align-items: center; gap: 1rem; }
+.lang-toggle-mobile, .menu-toggle {
+  background: none; border: none; font-weight: bold; letter-spacing: 0.1em;
+  font-size: 0.875rem; cursor: pointer; font-family: var(--font-sans);
+}
+
+/* Menú Mobile Desplegable */
+.mobile-menu {
+  display: none; position: fixed; top: 80px; left: 0;
+  width: 100%; height: calc(100vh - 80px); background-color: var(--color-white);
+  z-index: 40; border-bottom: 1px solid var(--color-gray-200); padding: 2rem;
+}
+.mobile-menu.open { display: block; }
+.mobile-menu nav { display: flex; flex-direction: column; gap: 2rem; }
+.mobile-menu button {
+  background: none; border: none; font-size: 1.5rem; letter-spacing: 0.05em;
+  text-transform: uppercase; cursor: pointer; font-family: var(--font-sans);
+}
+
+/* =========================================
+   HOME: MARQUESINA Y SECCIÓN NEGRA (Mobile First)
+   ========================================= */
+.marquee-wrapper {
+  overflow: hidden; white-space: nowrap; background: var(--color-white);
+  padding: 4rem 0; border-bottom: 1px solid var(--color-gray-100);
+  display: flex; align-items: center;
+}
+.marquee-content {
+  display: inline-block;
+  font-size: 4rem; font-weight: bold; text-transform: uppercase; line-height: 1;
+  animation: marquee 20s linear infinite;
+}
+@keyframes marquee {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.home-about {
+  background-color: var(--color-black); color: var(--color-white);
+  padding: 3rem 1.5rem;
+}
+.home-about .title {
+  font-size: 1.875rem; text-transform: uppercase;
+  border-bottom: 1px solid var(--color-white); /* Línea delgada */
+  display: inline-block; 
+  padding-bottom: 0.25rem; /* Separación de la línea más corta */
+  margin-bottom: 2rem;
+}
+
+/* Interlineados compactos (Aplica a Home y About) */
+.text-content p {
+  color: var(--color-gray-200); font-size: 0.875rem;
+  line-height: 1.2; 
+  margin-bottom: 0.5rem; 
+}
+.text-content-black p {
+  color: var(--color-black); font-size: 0.875rem;
+  line-height: 1.2; 
+  margin-bottom: 0.5rem; 
+}
+
+/* =========================================
+   UTILIDADES DE DISEÑO (Vistas About y Contact)
+   ========================================= */
+.grid-2 { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }
+.px-container { padding-left: 1.5rem; padding-right: 1.5rem; }
+.py-large { padding-top: 2.5rem; padding-bottom: 2.5rem; }
+.text-center-mobile { text-align: center; }
+.flex-center { display: flex; justify-content: center; align-items: center; }
+.logo-large { width: 12rem; height: 12rem; transition: transform 0.3s; opacity: 0.9; }
+.logo-large:hover { transform: scale(1.05); }
+.founder-img { width: 100%; max-width: 28rem; height: auto; object-fit: cover; border: 1px solid var(--color-gray-200); }
+.title-large { font-size: 2.25rem; text-transform: uppercase; }
+.title-medium { font-size: 1.875rem; text-transform: uppercase; }
+.mb-10 { margin-bottom: 2.5rem; }
+.mb-8 { margin-bottom: 2rem; }
+
+/* =========================================
+   FORMULARIO DE CONTACTO
+   ========================================= */
+.form-container { display: flex; flex-direction: column; gap: 1.25rem; }
+.form-group { display: flex; flex-direction: column; gap: 0.5rem; }
+.label { font-size: 0.875rem; font-weight: 500; }
+.sub-label { font-size: 0.75rem; color: var(--color-gray-500); display: block; margin-bottom: 0.25rem; }
+.required { font-size: 0.75rem; color: var(--color-gray-500); }
+.required.normal { font-weight: normal; }
+.grid-2-gap { display: grid; grid-template-columns: 1fr; gap: 1rem; }
+.input-field {
+  width: 100%; border: 1px solid var(--color-gray-300); padding: 0.5rem;
+  outline: none; transition: border-color 0.2s; font-family: var(--font-sans);
+}
+.input-field:focus { border-color: var(--color-black); }
+.resize-y { resize: vertical; }
+.submit-btn {
+  background-color: var(--color-black); color: var(--color-white);
+  padding: 0.75rem 2rem; font-weight: bold; border: none; cursor: pointer;
+  text-transform: uppercase; transition: background-color 0.2s; letter-spacing: 0.1em;
+}
+.submit-btn:hover { background-color: var(--color-gray-800); }
+
+/* =========================================
+   FOOTER
+   ========================================= */
+.footer {
+  width: 100%; background: var(--color-white); border-top: 1px solid var(--color-gray-200);
+  padding: 2rem 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem;
+}
+.footer-title { font-weight: bold; font-size: 1.25rem; letter-spacing: 0.1em; text-transform: uppercase; }
+.social-links { display: flex; gap: 1rem; }
+.social-links a {
+  background-color: var(--color-black); color: var(--color-white); padding: 0.5rem;
+  border-radius: 0.125rem; transition: background-color 0.2s; display: flex;
+}
+.social-links a:hover { background-color: var(--color-gray-800); }
+
+.footer-contact {
+  display: flex; flex-direction: column; gap: 0.5rem; align-items: center;
+}
+.footer-link {
+  text-decoration: underline; font-size: 0.875rem; transition: color 0.2s; word-break: break-all; color: var(--color-black);
+}
+.footer-link:hover { color: var(--color-gray-600); }
+.hidden-mobile { display: none; }
+
+
+/* =========================================
+   MEDIA QUERIES (DESKTOP)
+   ========================================= */
+@media (min-width: 768px) {
+  .logo { width: 3rem; height: 3rem; }
+  .desktop-nav { display: flex; }
+  .mobile-controls { display: none; }
+  
+  .marquee-wrapper { padding: 8rem 0; }
+  .marquee-content { font-size: 10rem; }
+  
+  /* --- Ajustes precisos de la sección Negra (ABOUT ME) --- */
+  /* padding: top right bottom left */
+  /* Top 3rem para que toque la línea superior, laterales en 12vw */
+  .home-about { padding: 3rem 12vw 8rem 12vw; } 
+  
+  .home-about .title { 
+    font-size: 3.75rem; 
+    border-bottom-width: 1.5px; /* Línea de la mitad de grosor */
+    padding-bottom: 0.25rem;    /* Separación a la mitad */
+  }
+  
+  .text-content p, .text-content-black p { font-size: 1rem; }
+  
+  /* Limita el ancho del texto a la línea vertical roja */
+  .home-about .text-content { max-width: 48%; }
+  
+  .grid-2 { grid-template-columns: 1fr 1fr; gap: 3rem; }
+  
+  /* Márgenes laterales del 12% para las vistas About y Contact */
+  .px-container { padding-left: 12vw; padding-right: 12vw; }
+  .py-large { padding-top: 5rem; padding-bottom: 5rem; }
+  
+  .text-center-mobile { text-align: left; }
+  .order-mobile-first { order: 0; }
+  .logo-large { width: 20rem; height: 20rem; }
+  .title-large { font-size: 3.75rem; }
+  .title-medium { font-size: 3rem; }
+  .grid-2-gap { grid-template-columns: 1fr 1fr; }
+  .submit-btn { width: auto; }
+  
+  /* Footer con márgenes del 12% y alineación horizontal */
+  .footer { 
+    flex-direction: row; 
+    justify-content: space-between; 
+    text-align: left; 
+    padding-left: 12vw; 
+    padding-right: 12vw; 
+  }
+  
+  /* Alineación del correo y teléfono en el footer */
+  .footer-contact { flex-direction: row; gap: 1rem; }
+  .hidden-mobile { display: inline; color: var(--color-gray-300); }
+}
