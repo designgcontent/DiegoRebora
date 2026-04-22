@@ -39,10 +39,19 @@ body {
 body.lang-en .es-text { display: none; }
 body.lang-es .en-text { display: none; }
 
-.view { display: none; }
-body.page-home #view-home { display: block; }
-body.page-about #view-about { display: block; }
-body.page-contact #view-contact { display: block; }
+/* --- NUEVA LÓGICA DE VISTAS CON TRANSICIÓN --- */
+.view {
+  display: none;
+  opacity: 0;
+  transition-property: opacity, transform;
+  transition-timing-function: ease;
+  transition-duration: 1.5s;
+  transition-delay: 0.33s;
+}
+
+.view.show-transition {
+  opacity: 1;
+}
 
 .main-content {
   flex: 1;
