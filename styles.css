@@ -10,7 +10,8 @@
   --color-gray-500: #6b7280;
   --color-gray-600: #4b5563;
   --color-gray-800: #1f2937;
-  --font-sans: 'Space Grotesk', sans-serif;
+  /* Cambio a Inter para una estética moderna y regular */
+  --font-sans: 'Inter', sans-serif;
   --font-title: 'Syne', sans-serif;
 }
 
@@ -149,14 +150,17 @@ body.lang-es .en-text { display: none; }
   margin-bottom: 4rem;      
 }
 
+/* Estilos de párrafo con peso Regular (400) */
 .text-content p {
   color: var(--color-gray-200); font-size: 0.875rem;
+  font-weight: 400; /* Regular */
   line-height: 1.55; 
   margin-bottom: 1rem; 
 }
 
 .text-content-black p {
   color: var(--color-black); font-size: 0.875rem;
+  font-weight: 400; /* Regular */
   line-height: 1.55; 
   margin-bottom: 1rem; 
 }
@@ -166,7 +170,7 @@ body.lang-es .en-text { display: none; }
    ========================================= */
 .grid-2 { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }
 
-/* Para alinear al tope superior (Contact Me) */
+/* Alineación para el tope superior (Título de Contacto) */
 .align-start { align-items: flex-start !important; }
 
 .px-container { padding-left: 1.5rem; padding-right: 1.5rem; }
@@ -177,13 +181,14 @@ body.lang-es .en-text { display: none; }
 .text-center-mobile { text-align: center; }
 .flex-center { display: flex; justify-content: center; align-items: center; }
 
-/* --- Logo Gigante (Versión Móvil) --- */
+/* --- Logo Gigante --- */
 .logo-large { width: 6rem; height: 6rem; transition: transform 0.3s; opacity: 0.9; }
 .logo-large:hover { transform: scale(1.05); }
 
 /* --- Foto del fundador --- */
 .founder-img { width: 100%; max-width: 19.6rem; height: auto; object-fit: cover; border: 1px solid var(--color-gray-200); }
 
+/* Título aumentado un 30% */
 .title-large { font-size: 2.925rem; text-transform: uppercase; }
 .title-medium { font-size: 1.875rem; text-transform: uppercase; }
 .max-w-xl { max-width: 36rem; }
@@ -218,7 +223,6 @@ body.lang-es .en-text { display: none; }
    ========================================= */
 .footer {
   width: 100%; background: var(--color-white); 
-  /* Se eliminó la línea superior (border-top) */
   padding: 2rem 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem;
 }
 .footer-title { font-weight: bold; font-size: 1.875rem; letter-spacing: 0.1em; text-transform: uppercase; }
@@ -273,7 +277,6 @@ body.lang-es .en-text { display: none; }
   .text-center-mobile { text-align: left; }
   .text-right-desktop { text-align: right; }
   
-  /* Centrado de la foto en escritorio */
   .flex-center-desktop { display: flex; justify-content: center; }
   .ml-auto-desktop { margin-left: auto; margin-right: 0; }
   
@@ -282,7 +285,9 @@ body.lang-es .en-text { display: none; }
   /* --- Logo Gigante --- */
   .logo-large { width: 22rem; height: 22rem; }
   
+  /* Título aumentado un 30% en escritorio */
   .title-large { font-size: 4.875rem; }
+  
   .title-medium { font-size: 3rem; }
   .grid-2-gap { grid-template-columns: 1fr 1fr; }
   .submit-btn { width: auto; }
