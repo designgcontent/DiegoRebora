@@ -145,10 +145,10 @@ body.lang-es .en-text { display: none; }
 }
 .home-about .title {
   font-size: 1.875rem; text-transform: uppercase;
-  border-bottom: 1px solid var(--color-white); /* Línea delgada */
+  border-bottom: 1px solid var(--color-white);
   display: inline-block; 
-  padding-bottom: 0.25rem; /* Separación de la línea más corta */
-  margin-bottom: 2rem;
+  padding-bottom: 0.125rem; /* 50% más cerca al título (antes era 0.25rem) */
+  margin-bottom: 4rem;      /* El doble de separación hacia el texto (antes era 2rem) */
 }
 
 /* Interlineados (Aplica a Home y About) */
@@ -244,10 +244,11 @@ body.lang-es .en-text { display: none; }
   /* Top 3rem para que toque la línea superior, laterales en 12vw */
   .home-about { padding: 3rem 12vw 8rem 12vw; } 
   
-  .home-about .title { 
+.home-about .title { 
     font-size: 3.75rem; 
-    border-bottom-width: 1.5px; /* Línea de la mitad de grosor */
-    padding-bottom: 0.25rem;    /* Separación a la mitad */
+    border-bottom-width: 1.5px; 
+    padding-bottom: 0.125rem; /* 50% más cerca al título */
+    margin-bottom: 4rem;      /* Aseguramos el doble de espacio en escritorio */
   }
   
   .text-content p, .text-content-black p { font-size: 1rem; }
