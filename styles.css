@@ -76,7 +76,7 @@ body.lang-es .en-text { display: none; }
 
 .logo-container { cursor: pointer; display: flex; align-items: center; gap: 1rem; }
 .logo {
-  width: 2.5rem; height: 2.5rem;
+  width: 1.5rem; height: 1.5rem;
   transition: transform 0.3s;
 }
 .logo:hover { transform: scale(1.05); }
@@ -232,7 +232,7 @@ body.lang-es .en-text { display: none; }
    MEDIA QUERIES (DESKTOP)
    ========================================= */
 @media (min-width: 768px) {
-  .logo { width: 3rem; height: 3rem; }
+  .logo { width: 1.5rem; height: 1.5rem; }
   .desktop-nav { display: flex; }
   .mobile-controls { display: none; }
   
@@ -265,7 +265,7 @@ body.lang-es .en-text { display: none; }
   .text-center-mobile { text-align: left; }
   .text-right-desktop { text-align: right; }
   .order-mobile-first { order: 0; }
-  .logo-large { width: 20rem; height: 20rem; }
+  .logo-large { width: 6rem; height: 6rem; }
   .title-large { font-size: 3.75rem; }
   .title-medium { font-size: 3rem; }
   .grid-2-gap { grid-template-columns: 1fr 1fr; }
