@@ -39,7 +39,6 @@ body {
 body.lang-en .es-text { display: none; }
 body.lang-es .en-text { display: none; }
 
-/* --- NUEVA LÓGICA DE VISTAS CON TRANSICIÓN --- */
 .view {
   display: none;
   opacity: 0;
@@ -55,7 +54,7 @@ body.lang-es .en-text { display: none; }
 
 .main-content {
   flex: 1;
-  padding-top: 80px; /* Compensa el header fijo */
+  padding-top: 80px; 
 }
 
 /* =========================================
@@ -108,7 +107,6 @@ body.lang-es .en-text { display: none; }
   font-size: 0.875rem; cursor: pointer; font-family: var(--font-sans);
 }
 
-/* Menú Mobile Desplegable */
 .mobile-menu {
   display: none; position: fixed; top: 80px; left: 0;
   width: 100%; height: calc(100vh - 80px); background-color: var(--color-white);
@@ -122,7 +120,7 @@ body.lang-es .en-text { display: none; }
 }
 
 /* =========================================
-   HOME: MARQUESINA Y SECCIÓN NEGRA (Mobile First)
+   HOME: MARQUESINA Y SECCIÓN NEGRA 
    ========================================= */
 .marquee-wrapper {
   overflow: hidden; white-space: nowrap; background: var(--color-white);
@@ -147,21 +145,20 @@ body.lang-es .en-text { display: none; }
   font-size: 1.875rem; text-transform: uppercase;
   border-bottom: 1px solid var(--color-white);
   display: inline-block; 
-  padding-bottom: 0.125rem; /* 50% más cerca al título (antes era 0.25rem) */
-  margin-bottom: 4rem;      /* El doble de separación hacia el texto (antes era 2rem) */
+  padding-bottom: 0.125rem; 
+  margin-bottom: 4rem;      
 }
 
-/* Interlineados (Aplica a Home y About) */
 .text-content p {
   color: var(--color-gray-200); font-size: 0.875rem;
-  line-height: 1.55; /* 30% más de separación entre líneas */
-  margin-bottom: 1rem; /* El doble de distancia entre párrafos */
+  line-height: 1.55; 
+  margin-bottom: 1rem; 
 }
 
 .text-content-black p {
   color: var(--color-black); font-size: 0.875rem;
-  line-height: 1.55; /* 30% más de separación entre líneas */
-  margin-bottom: 1rem; /* El doble de distancia entre párrafos */
+  line-height: 1.55; 
+  margin-bottom: 1rem; 
 }
 
 /* =========================================
@@ -174,9 +171,25 @@ body.lang-es .en-text { display: none; }
 .flex-center { display: flex; justify-content: center; align-items: center; }
 .logo-large { width: 12rem; height: 12rem; transition: transform 0.3s; opacity: 0.9; }
 .logo-large:hover { transform: scale(1.05); }
+
+/* --- Ajuste del Recuadro Rojo --- */
+.red-outline-box {
+  border: 3px solid #7a151a; /* Borde rojo oscuro / vino */
+  width: 100%;
+  max-width: 24rem; /* Tamaño del cuadrado */
+  aspect-ratio: 1 / 1; /* Obliga a que sea un cuadrado perfecto */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+/* --- Ajuste de la Foto --- */
 .founder-img { width: 100%; max-width: 19.6rem; height: auto; object-fit: cover; border: 1px solid var(--color-gray-200); }
+
 .title-large { font-size: 2.25rem; text-transform: uppercase; }
 .title-medium { font-size: 1.875rem; text-transform: uppercase; }
+.max-w-xl { max-width: 36rem; }
 .mb-10 { margin-bottom: 2.5rem; }
 .mb-8 { margin-bottom: 2rem; }
 
@@ -239,31 +252,31 @@ body.lang-es .en-text { display: none; }
   .marquee-wrapper { padding: 8rem 0; }
   .marquee-content { font-size: 10rem; }
   
-  /* --- Ajustes precisos de la sección Negra (ABOUT ME) --- */
-  /* padding: top right bottom left */
-  /* Top 3rem para que toque la línea superior, laterales en 12vw */
   .home-about { padding: 3rem 12vw 8rem 12vw; } 
   
-.home-about .title { 
+  .home-about .title { 
     font-size: 3.75rem; 
     border-bottom-width: 1.5px; 
-    padding-bottom: 0.125rem; /* 50% más cerca al título */
-    margin-bottom: 4rem;      /* Aseguramos el doble de espacio en escritorio */
+    padding-bottom: 0.125rem; 
+    margin-bottom: 4rem;      
   }
   
   .text-content p, .text-content-black p { font-size: 1rem; }
   
-  /* Limita el ancho del texto a la línea vertical roja */
   .home-about .text-content { max-width: 48%; }
   
   .grid-2 { grid-template-columns: 1fr 1fr; gap: 3rem; }
   
-  /* Márgenes laterales del 12% para las vistas About y Contact */
   .px-container { padding-left: 12vw; padding-right: 12vw; }
   .py-large { padding-top: 5rem; padding-bottom: 5rem; }
   
   .text-center-mobile { text-align: left; }
   .text-right-desktop { text-align: right; }
+  
+  /* Alineaciones de grilla para foto y texto */
+  .flex-start-desktop { display: flex; justify-content: flex-start; }
+  .ml-auto-desktop { margin-left: auto; margin-right: 0; }
+  
   .order-mobile-first { order: 0; }
   .logo-large { width: 6rem; height: 6rem; }
   .title-large { font-size: 3.75rem; }
@@ -271,7 +284,6 @@ body.lang-es .en-text { display: none; }
   .grid-2-gap { grid-template-columns: 1fr 1fr; }
   .submit-btn { width: auto; }
   
-  /* Footer con márgenes del 12% y alineación horizontal */
   .footer { 
     flex-direction: row; 
     justify-content: space-between; 
@@ -280,7 +292,6 @@ body.lang-es .en-text { display: none; }
     padding-right: 12vw; 
   }
   
-  /* Alineación del correo y teléfono en el footer */
   .footer-contact { flex-direction: row; gap: 1rem; }
   .hidden-mobile { display: inline; color: var(--color-gray-300); }
 }
