@@ -263,6 +263,7 @@ body.lang-es .en-text { display: none; }
   .py-large { padding-top: 5rem; padding-bottom: 5rem; }
   
   .text-center-mobile { text-align: left; }
+  .text-right-desktop { text-align: right; }
   .order-mobile-first { order: 0; }
   .logo-large { width: 20rem; height: 20rem; }
   .title-large { font-size: 3.75rem; }
