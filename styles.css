@@ -143,16 +143,17 @@ body.page-contact #view-contact { display: block; }
   margin-bottom: 2rem;
 }
 
-/* Interlineados compactos (Aplica a Home y About) */
+/* Interlineados (Aplica a Home y About) */
 .text-content p {
   color: var(--color-gray-200); font-size: 0.875rem;
-  line-height: 1.2; 
-  margin-bottom: 0.5rem; 
+  line-height: 1.55; /* 30% más de separación entre líneas */
+  margin-bottom: 1rem; /* El doble de distancia entre párrafos */
 }
+
 .text-content-black p {
   color: var(--color-black); font-size: 0.875rem;
-  line-height: 1.2; 
-  margin-bottom: 0.5rem; 
+  line-height: 1.55; /* 30% más de separación entre líneas */
+  margin-bottom: 1rem; /* El doble de distancia entre párrafos */
 }
 
 /* =========================================
