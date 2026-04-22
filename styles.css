@@ -75,7 +75,7 @@ body.lang-es .en-text { display: none; }
 
 .logo-container { cursor: pointer; display: flex; align-items: center; gap: 1rem; }
 .logo {
-  width: 1.25rem; height: 1.25rem; /* Mitad de tamaño original para móviles */
+  width: 1.25rem; height: 1.25rem; 
   transition: transform 0.3s;
 }
 .logo:hover { transform: scale(1.05); }
@@ -165,6 +165,10 @@ body.lang-es .en-text { display: none; }
    UTILIDADES DE DISEÑO (Vistas About y Contact)
    ========================================= */
 .grid-2 { display: grid; grid-template-columns: 1fr; gap: 2rem; align-items: center; }
+
+/* Para alinear al tope superior (Contact Me) */
+.align-start { align-items: flex-start !important; }
+
 .px-container { padding-left: 1.5rem; padding-right: 1.5rem; }
 
 /* Espaciado vertical reducido al 40% */
@@ -173,14 +177,13 @@ body.lang-es .en-text { display: none; }
 .text-center-mobile { text-align: center; }
 .flex-center { display: flex; justify-content: center; align-items: center; }
 
-/* --- Logo Gigante (Versión Móvil reducida) --- */
+/* --- Logo Gigante (Versión Móvil) --- */
 .logo-large { width: 6rem; height: 6rem; transition: transform 0.3s; opacity: 0.9; }
 .logo-large:hover { transform: scale(1.05); }
 
-/* --- Foto del fundador reducida --- */
+/* --- Foto del fundador --- */
 .founder-img { width: 100%; max-width: 19.6rem; height: auto; object-fit: cover; border: 1px solid var(--color-gray-200); }
 
-/* Título aumentado un 30% */
 .title-large { font-size: 2.925rem; text-transform: uppercase; }
 .title-medium { font-size: 1.875rem; text-transform: uppercase; }
 .max-w-xl { max-width: 36rem; }
@@ -215,6 +218,7 @@ body.lang-es .en-text { display: none; }
    ========================================= */
 .footer {
   width: 100%; background: var(--color-white); 
+  /* Se eliminó la línea superior (border-top) */
   padding: 2rem 1.5rem; display: flex; flex-direction: column; align-items: center; text-align: center; gap: 1rem;
 }
 .footer-title { font-weight: bold; font-size: 1.875rem; letter-spacing: 0.1em; text-transform: uppercase; }
@@ -275,12 +279,10 @@ body.lang-es .en-text { display: none; }
   
   .order-mobile-first { order: 0; }
   
-  /* --- Logo Gigante (Tamaño aumentado para igualar la referencia visual) --- */
+  /* --- Logo Gigante --- */
   .logo-large { width: 22rem; height: 22rem; }
   
-  /* Título aumentado un 30% en escritorio */
   .title-large { font-size: 4.875rem; }
-  
   .title-medium { font-size: 3rem; }
   .grid-2-gap { grid-template-columns: 1fr 1fr; }
   .submit-btn { width: auto; }
